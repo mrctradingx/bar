@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: ticketmaster-barcode
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"

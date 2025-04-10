@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket</title>
+    <style>
+        .ticket-container {
+            border: 1px solid #ccc;
+            width: 400px;
+            padding: 20px;
+            font-family: Arial;
+        }
+        .barcode {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="ticket-container">
+    <h2>{{ ticket.event_name }}</h2>
+    <p><strong>Date:</strong> {{ ticket.date }}</p>
+    <p><strong>Section:</strong> {{ ticket.section }}</p>
+    <p><strong>Row:</strong> {{ ticket.row }}</p>
+    <p><strong>Seat:</strong> {{ ticket.seat }}</p>
+    <div class="barcode">
+        <img src="data:image/png;base64,{{ barcode_img }}" />
+    </div>
+</div>
+</body>
+</html>
